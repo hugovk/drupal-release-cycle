@@ -56,7 +56,7 @@ function drawChart() {
     {
       "taskID": "8.8",
       "taskName": "Drupal 8.8",
-      "resource": "security",
+      "resource": "bugfix",
       "start": release_8_8,
       "end": new Date(2020, 12, 2), // [1]
     },
