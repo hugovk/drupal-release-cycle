@@ -16,6 +16,10 @@ function drawChart() {
   // "Security fixes are provided until the following minor release, approximately
   // six additional months (so each minor receives security coverage for one year
   // in total and two minors receive security coverage at a time)."
+  const release_8_0 = new Date(2015, 11, 19);
+  const release_8_1 = new Date(2016, 4, 20);
+  const release_8_2 = new Date(2016, 10, 5);
+  const release_8_3 = new Date(2017, 4, 5);
   const release_8_4 = new Date(2017, 10, 4);
   const release_8_5 = new Date(2018, 3, 3);
   const release_8_6 = new Date(2018, 9, 5);
@@ -25,6 +29,34 @@ function drawChart() {
   const release_9_0 = new Date(2020, 6, 3); // [1]
 
   const releases = [
+     {
+      "taskID": "8.0",
+      "taskName": "Drupal 8.0",
+      "resource": "dead",
+      "start": release_8_0,
+      "end": release_8_2,
+    },
+     {
+      "taskID": "8.1",
+      "taskName": "Drupal 8.1",
+      "resource": "dead",
+      "start": release_8_1,
+      "end": release_8_3,
+    },
+     {
+      "taskID": "8.2",
+      "taskName": "Drupal 8.2",
+      "resource": "dead",
+      "start": release_8_2,
+      "end": release_8_4,
+    },
+     {
+      "taskID": "8.3",
+      "taskName": "Drupal 8.3",
+      "resource": "dead",
+      "start": release_8_3,
+      "end": release_8_5,
+    },
      {
       "taskID": "8.4",
       "taskName": "Drupal 8.4",
