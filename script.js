@@ -12,148 +12,77 @@ function drawChart() {
   data.addColumn("number", "Percent Complete");
   data.addColumn("string", "Dependencies");
 
-  var releases = [
-    // {
-    //   taskID: "0.9",
-    //   taskName: "Django 0.9",
-    //   resource: "dead",
-    //   start: new Date(2005, 11, 16),
-    //   end: new Date(2013, 02, 26)
-    // },
-    // {
-    //   taskID: "1.0",
-    //   taskName: "Django 1.0",
-    //   resource: "dead",
-    //   start: new Date(2008, 09, 03),
-    //   end: new Date(2013, 02, 26)
-    // },
-    // {
-    //   taskID: "1.1",
-    //   taskName: "Django 1.1",
-    //   resource: "dead",
-    //   start: new Date(2009, 07, 29),
-    //   end: new Date(2013, 02, 26)
-    // },
-    // {
-    //   taskID: "1.2",
-    //   taskName: "Django 1.2",
-    //   resource: "dead",
-    //   start: new Date(2010, 05, 17),
-    //   end: new Date(2013, 02, 26)
-    // },
-    // {
-    //   taskID: "1.3",
-    //   taskName: "Django 1.3",
-    //   resource: "dead",
-    //   start: new Date(2011, 03, 23),
-    //   end: new Date(2013, 02, 26)
-    // },
-    {
-      taskID: "1.4",
-      taskName: "Django 1.4 LTS",
-      resource: "dead",
-      start: new Date(2012, 03, 23),
-      end: new Date(2015, 10, 01)
+  // Generally, 8.x is in security support until 8.x+2 is out:
+  // "Security fixes are provided until the following minor release, approximately
+  // six additional months (so each minor receives security coverage for one year
+  // in total and two minors receive security coverage at a time)."
+  const release_8_4 = new Date(2017, 10, 4);
+  const release_8_5 = new Date(2018, 3, 3);
+  const release_8_6 = new Date(2018, 9, 5);
+  const release_8_7 = new Date(2019, 5, 1);
+  const release_8_8 = new Date(2019, 12, 4);
+  const release_8_9 = new Date(2020, 6, 3); // [1]
+  const release_9_0 = new Date(2020, 6, 3); // [1]
+
+  const releases = [
+     {
+      "taskID": "8.4",
+      "taskName": "Drupal 8.4",
+      "resource": "dead",
+      "start": release_8_4,
+      "end": release_8_6,
+    },
+     {
+      "taskID": "8.5",
+      "taskName": "Drupal 8.5",
+      "resource": "dead",
+      "start": release_8_5,
+      "end": release_8_7,
     },
     {
-      taskID: "1.5",
-      taskName: "Django 1.5",
-      resource: "dead",
-      start: new Date(2013, 03, 26),
-      end: new Date(2014, 09, 02)
+      "taskID": "8.6",
+      "taskName": "Drupal 8.6",
+      "resource": "security",
+      "start": release_8_6,
+      "end": release_8_8,
     },
     {
-      taskID: "1.6",
-      taskName: "Django 1.6",
-      resource: "dead",
-      start: new Date(2013, 11, 03),
-      end: new Date(2015, 04, 01)
+      "taskID": "8.7",
+      "taskName": "Drupal 8.7",
+      "resource": "security",
+      "start": release_8_7,
+      "end": release_8_9,
     },
     {
-      taskID: "1.7",
-      taskName: "Django 1.7",
-      resource: "dead",
-      start: new Date(2014, 09, 02),
-      end: new Date(2015, 12, 01)
+      "taskID": "8.8",
+      "taskName": "Drupal 8.8",
+      "resource": "security",
+      "start": release_8_8,
+      "end": new Date(2020, 12, 2), // [1]
     },
     {
-      taskID: "1.8",
-      taskName: "Django 1.8 LTS",
-      resource: "dead",
-      start: new Date(2015, 04, 01),
-      end: new Date(2018, 04, 01)
+      "taskID": "8.9",
+      "taskName": "Drupal 8.9 LTS",
+      "resource": "prerelease",
+      "start": release_8_9,
+      "end": new Date(2021, 11, 30), // [2]
     },
     {
-      taskID: "1.9",
-      taskName: "Django 1.9",
-      resource: "dead",
-      start: new Date(2015, 12, 01),
-      end: new Date(2017, 04, 04)
-    },
-    {
-      taskID: "1.10",
-      taskName: "Django 1.10",
-      resource: "dead",
-      start: new Date(2016, 08, 01),
-      end: new Date(2017, 12, 02)
-    },
-    {
-      taskID: "1.11",
-      taskName: "Django 1.11 LTS",
-      resource: "security",
-      start: new Date(2017, 04, 04),
-      end: new Date(2020, 04, 01)
-    },
-    {
-      taskID: "2.0",
-      taskName: "Django 2.0",
-      resource: "dead",
-      start: new Date(2017, 12, 02),
-      end: new Date(2019, 04, 01)
-    },
-    {
-      taskID: "2.1",
-      taskName: "Django 2.1",
-      resource: "dead",
-      start: new Date(2018, 08, 01),
-      end: new Date(2019, 12, 02)
-    },
-    {
-      taskID: "2.2",
-      taskName: "Django 2.2 LTS",
-      resource: "bugfix",
-      start: new Date(2019, 01, 01),
-      end: new Date(2022, 04, 01)
-    },
-    {
-      taskID: "3.0",
-      taskName: "Django 3.0",
-      resource: "bugfix",
-      start: new Date(2019, 12, 02),
-      end: new Date(2021, 04, 01)
-    },
-    {
-      taskID: "3.1",
-      taskName: "Django 3.1",
-      resource: "prerelease",
-      start: new Date(2020, 08, 01),
-      end: new Date(2021, 12, 01)
-    },
-    {
-      taskID: "3.2",
-      taskName: "Django 3.2 LTS",
-      resource: "prerelease",
-      start: new Date(2021, 04, 01),
-      end: new Date(2024, 04, 01)
-    },
-    {
-      taskID: "4.0",
-      taskName: "Django 4.0",
-      resource: "prerelease",
-      start: new Date(2021, 12, 01),
-      end: new Date(2023, 04, 01)
+      "taskID": "9.0",
+      "taskName": "Drupal 9.0",
+      "resource": "prerelease",
+      "start": release_9_0,
+      "end": new Date(2021, 6, 30), // [3]
     }
   ];
+
+  // [1] Drupal 8.9/9.0 if Drupal 9 beta requirements are met by March 13, 2020
+  // https://www.drupal.org/core/release-cycle-overview#drupal9june
+
+  // [2] D8 EOL no later than Nov 2021. Could be 8.9 or 8.10
+  // https://www.drupal.org/core/release-cycle-overview#drupal-8-eol
+
+  // [3] https://www.drupal.org/blog/plan-for-drupal-9
 
   for (var release of releases) {
     data.addRow([
