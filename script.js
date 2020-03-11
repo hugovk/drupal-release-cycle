@@ -30,6 +30,13 @@ function drawChart() {
 
   const releases = [
      {
+      "taskID": "7",
+      "taskName": "Drupal 7.41+",
+      "resource": "security",
+      "start": new Date(2015, 10, 21),
+      "end": new Date(2021, 11, 30),
+    },
+     {
       "taskID": "8.0",
       "taskName": "Drupal 8.0",
       "resource": "dead",
@@ -151,16 +158,16 @@ function drawChart() {
       trackHeight: 30,
       palette: [
         {
-          // Red
-          color: "#db4437",
-          dark: "#a52714",
-          light: "#f4c7c3"
-        },
-        {
           // Yellow
           color: "#f2a600",
           dark: "#ee8100",
           light: "#fce8b2"
+        },
+        {
+          // Red
+          color: "#db4437",
+          dark: "#a52714",
+          light: "#f4c7c3"
         },
         {
           // Green
