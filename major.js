@@ -14,93 +14,69 @@ function drawChart() {
 
   const releases = [
      {
+      "taskID": "1",
+      "taskName": "Drupal 1",
+      "resource": "dead",
+      "start": release_1_0,
+      "end": release_2_0, // Assumption, correction welcome!
+    },
+     {
+      "taskID": "2",
+      "taskName": "Drupal 2",
+      "resource": "dead",
+      "start": release_2_0,
+      "end": release_3_0, // Assumption, correction welcome!
+    },
+     {
+      "taskID": "3",
+      "taskName": "Drupal 3",
+      "resource": "dead",
+      "start": release_3_0,
+      "end": release_4_0, // Assumption, correction welcome!
+    },
+     {
+      "taskID": "4",
+      "taskName": "Drupal 4",
+      "resource": "dead",
+      "start": release_4_0,
+      "end": release_5_0, // Assumption, correction welcome!
+    },
+     {
+      "taskID": "5",
+      "taskName": "Drupal 5",
+      "resource": "dead",
+      "start": release_5_0,
+      "end": release_7_0,
+    },
+     {
+      "taskID": "6",
+      "taskName": "Drupal 6",
+      "resource": "dead",
+      "start": release_6_0,
+      "end": eol_6,
+    },
+     {
       "taskID": "7",
-      "taskName": "Drupal 7.41+",
+      "taskName": "Drupal 7",
       "resource": "security",
-      "start": release_7_41,
+      "start": release_7_0,
       "end": eol_7,
     },
      {
-      "taskID": "8.0",
-      "taskName": "Drupal 8.0",
-      "resource": "dead",
-      "start": release_8_0,
-      "end": release_8_2,
-    },
-     {
-      "taskID": "8.1",
-      "taskName": "Drupal 8.1",
-      "resource": "dead",
-      "start": release_8_1,
-      "end": release_8_3,
-    },
-     {
-      "taskID": "8.2",
-      "taskName": "Drupal 8.2",
-      "resource": "dead",
-      "start": release_8_2,
-      "end": release_8_4,
-    },
-     {
-      "taskID": "8.3",
-      "taskName": "Drupal 8.3",
-      "resource": "dead",
-      "start": release_8_3,
-      "end": release_8_5,
-    },
-     {
-      "taskID": "8.4",
-      "taskName": "Drupal 8.4",
-      "resource": "dead",
-      "start": release_8_4,
-      "end": release_8_6,
-    },
-     {
-      "taskID": "8.5",
-      "taskName": "Drupal 8.5",
-      "resource": "dead",
-      "start": release_8_5,
-      "end": release_8_7,
-    },
-    {
-      "taskID": "8.6",
-      "taskName": "Drupal 8.6",
-      "resource": "security",
-      "start": release_8_6,
-      "end": release_8_8,
-    },
-    {
-      "taskID": "8.7",
-      "taskName": "Drupal 8.7",
-      "resource": "security",
-      "start": release_8_7,
-      "end": release_8_9,
-    },
-    {
-      "taskID": "8.8",
-      "taskName": "Drupal 8.8",
+      "taskID": "8",
+      "taskName": "Drupal 8",
       "resource": "bugfix",
-      "start": release_8_8,
-      "end": eol_8_8,
-    },
-    {
-      "taskID": "8.9",
-      "taskName": "Drupal 8.9 LTS",
-      "resource": "prerelease",
-      "start": release_8_9,
+      "start": release_8_0,
       "end": eol_8,
     },
-    {
-      "taskID": "9.0",
-      "taskName": "Drupal 9.0",
-      "resource": "prerelease",
+     {
+      "taskID": "9",
+      "taskName": "Drupal 9",
+      "resource": "bugfix",
       "start": release_9_0,
-      "end": eol_9_0,
-    }
+      "end": eol_9,
+    },
   ];
-
-  // [1] Drupal 8.9/9.0 if Drupal 9 beta requirements are met by March 13, 2020
-  // https://www.drupal.org/core/release-cycle-overview#drupal9june
 
   const now = new Date();
 
@@ -137,16 +113,16 @@ function drawChart() {
       trackHeight: 30,
       palette: [
         {
-          // Yellow
-          color: "#f2a600",
-          dark: "#ee8100",
-          light: "#fce8b2"
-        },
-        {
           // Red
           color: "#db4437",
           dark: "#a52714",
           light: "#f4c7c3"
+        },
+        {
+          // Yellow
+          color: "#f2a600",
+          dark: "#ee8100",
+          light: "#fce8b2"
         },
         {
           // Green
