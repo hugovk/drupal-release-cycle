@@ -20,22 +20,18 @@ const release_8_5 = new Date(2018, 3, 3);
 const release_8_6 = new Date(2018, 9, 5);
 const release_8_7 = new Date(2019, 5, 1);
 const release_8_8 = new Date(2019, 12, 4);
-const release_8_9 = new Date(2020, 6, 3); // [1]
-const release_9_0 = new Date(2020, 6, 3); // [1]
+const release_8_9 = new Date(2020, 6, 3);
+const release_9_0 = new Date(2020, 6, 3);
 
 const eol_6 = new Date(2016, 2, 24);
 const eol_7 = new Date(2021, 11, 30);
-const eol_8_8 = new Date(2020, 12, 2); // [1]
-const eol_8 = new Date(2021, 11, 30); // [2]
-const eol_9_0 = new Date(2021, 6, 30); // [1]
-const eol_9 = new Date(2023, 12, 31); // [3]
+const eol_8_8 = new Date(2020, 12, 2);
+const eol_8 = new Date(2021, 11, 30); // [1]
+const eol_9_0 = new Date(2021, 6, 30);
+const eol_9 = new Date(2023, 12, 31); // [2]
 
-
-// [1] Drupal 8.9/9.0 if Drupal 9 beta requirements are met by March 13, 2020
-// https://www.drupal.org/core/release-cycle-overview#drupal9june
-
-// [2] D8 EOL no later than Nov 2021. Could be 8.9 or 8.10
+// [1] D8 EOL no later than Nov 2021. Could be 8.9 or 8.10
 // https://www.drupal.org/core/release-cycle-overview#drupal-8-eol
 
-// [3] estimate
+// [2] estimate
 // https://www.drupal.org/blog/plan-for-drupal-9
