@@ -99,9 +99,6 @@ function drawChart() {
     }
   ];
 
-  // [1] Drupal 8.9/9.0 if Drupal 9 beta requirements are met by March 13, 2020
-  // https://www.drupal.org/core/release-cycle-overview#drupal9june
-
   const now = new Date();
 
   for (var release of releases) {
