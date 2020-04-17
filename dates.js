@@ -18,7 +18,7 @@ const release_6_0 = date(2008, 2, 13);
 const release_7_0 = date(2011, 1, 5);
 const release_7_41 = date(2015, 10, 21);
 
-// Generally, 8.x is in security support until 8.x+2 is out:
+// Generally, for D8+, x.y is in security support until x.y+2 is out:
 // "Security fixes are provided until the following minor release, approximately
 // six additional months (so each minor receives security coverage for one year
 // in total and two minors receive security coverage at a time)."
