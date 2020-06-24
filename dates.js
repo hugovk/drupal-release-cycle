@@ -44,7 +44,7 @@ const release_9_0 = date(2020, 6, 3);
 const release_9_1 = date(2020, 12, 2);
 
 const eol_6 = date(2016, 2, 24);
-const eol_7 = date(2021, 11, 30);
+const eol_7 = date(2022, 11, 28);
 
 // 8.0-8.5: eol = release + 7 months
 const eol_8_0 = date(2016, 6, 19);
