@@ -76,6 +76,13 @@ function drawChart() {
       "start": release_9_0,
       "end": eol_9,
     },
+     {
+      "taskID": "10",
+      "taskName": "Drupal 10",
+      "resource": "prerelease",
+      "start": release_10_0,
+      "end": eol_10,
+    },
   ];
 
   const now = new Date();

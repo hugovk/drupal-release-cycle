@@ -44,6 +44,7 @@ const release_9_0 = date(2020, 6, 3);
 const release_9_1 = date(2020, 12, 2);
 const release_9_2 = date(2021, 6, 16);
 const release_9_3 = date(2021, 12, 8);
+const release_10_0 = date(2022, 6, 1); // TBA [2]
 
 const eol_6 = date(2016, 2, 24);
 const eol_7 = date(2022, 11, 28);
@@ -62,10 +63,13 @@ const eol_9_0 = date(2021, 6, 16);
 const eol_9_1 = date(2021, 12, 8);
 const eol_9_2 = date(2022, 6, 30); // TBA
 const eol_9_3 = date(2022, 12, 31); // TBA
-const eol_9 = date(2023, 12, 31); // [2]
+const eol_9 = date(2023, 11, 30); // TBA [2]
+const eol_10 = date(2025, 12, 31); // TBA
 
 // [1] D8 EOL no later than Nov 2021. Could be 8.9 or 8.10
 // https://www.drupal.org/core/release-cycle-overview#drupal-8-eol
 
-// [2] estimate
-// https://www.drupal.org/blog/plan-for-drupal-9
+// [2]
+// "We are targeting to release Drupal 10 around June 2022."
+// "Drupal has to ... end-of-life Drupal 9 no later than November 2023."
+// https://dri.es/drupal-10-target-release-date-and-drupal-9-end-of-life
