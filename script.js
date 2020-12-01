@@ -95,14 +95,14 @@ function drawChart() {
       "taskName": "Drupal 9.0",
       "resource": "bugfix",
       "start": release_9_0,
-      "end": eol_9_0,
+      "end": release_9_2,
     },
     {
       "taskID": "9.1",
       "taskName": "Drupal 9.1",
       "resource": "prerelease",
       "start": release_9_1,
-      "end": eol_9_1,
+      "end": release_9_3,
     },
     {
       "taskID": "9.2",
