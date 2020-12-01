@@ -42,7 +42,8 @@ const release_8_8 = date(2019, 12, 4);
 const release_8_9 = date(2020, 6, 3);
 const release_9_0 = date(2020, 6, 3);
 const release_9_1 = date(2020, 12, 2);
-const release_9_2 = date(2021, 6, 2);
+const release_9_2 = date(2021, 6, 16);
+const release_9_3 = date(2021, 12, 8);
 
 const eol_6 = date(2016, 2, 24);
 const eol_7 = date(2022, 11, 28);
@@ -57,9 +58,10 @@ const eol_8_5 = date(2018, 10, 3);
 
 const eol_8_8 = date(2020, 12, 2);
 const eol_8 = date(2021, 11, 30); // [1]
-const eol_9_0 = date(2021, 6, 30);
-const eol_9_1 = date(2021, 12, 31); // TBA
+const eol_9_0 = date(2021, 6, 16);
+const eol_9_1 = date(2021, 12, 8);
 const eol_9_2 = date(2022, 6, 30); // TBA
+const eol_9_3 = date(2022, 12, 31); // TBA
 const eol_9 = date(2023, 12, 31); // [2]
 
 // [1] D8 EOL no later than Nov 2021. Could be 8.9 or 8.10
