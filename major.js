@@ -65,7 +65,7 @@ function drawChart() {
      {
       "taskID": "8",
       "taskName": "Drupal 8",
-      "resource": "bugfix",
+      "resource": "security",
       "start": release_8_0,
       "end": eol_8,
     },
