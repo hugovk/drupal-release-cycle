@@ -110,6 +110,13 @@ function drawChart() {
       "resource": "prerelease",
       "start": release_9_2,
       "end": eol_9_2,
+    },
+    {
+      "taskID": "9.3",
+      "taskName": "Drupal 9.3",
+      "resource": "prerelease",
+      "start": release_9_3,
+      "end": eol_9_3,
     }
   ];
 
