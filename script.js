@@ -79,7 +79,7 @@ function drawChart() {
     {
       "taskID": "8.8",
       "taskName": "Drupal 8.8",
-      "resource": "security",
+      "resource": "dead",
       "start": release_8_8,
       "end": eol_8_8,
     },
@@ -93,14 +93,14 @@ function drawChart() {
     {
       "taskID": "9.0",
       "taskName": "Drupal 9.0",
-      "resource": "bugfix",
+      "resource": "security",
       "start": release_9_0,
       "end": release_9_2,
     },
     {
       "taskID": "9.1",
       "taskName": "Drupal 9.1",
-      "resource": "prerelease",
+      "resource": "bugfix",
       "start": release_9_1,
       "end": release_9_3,
     },
